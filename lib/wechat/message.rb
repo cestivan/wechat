@@ -106,6 +106,10 @@ module Wechat
       update(MsgType: 'template', Template: template_fields)
     end
 
+    def transfer_customer_service
+      update(MsgType: 'transfer_customer_service')
+    end
+
     def to_xml
       message_hash.to_xml(root: 'xml', children: 'item', skip_instruct: true, skip_types: true)
     end
